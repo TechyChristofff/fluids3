@@ -1,0 +1,77 @@
+﻿Build started 03/12/2015 19:09:14.
+     1>Project "E:\Documents\GitHub\fluids3\fluids_v3.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(356,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+     1>CustomBuild:
+         Performing Custom Build Tools
+     1>fluids/fluid_system_host.cu(83): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(84): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(92): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(93): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(83): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(84): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(92): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(93): warning : variable "argv" was declared but never referenced
+         
+         fluid_system_host.cu
+     1>fluids/fluid_system_host.cu(287): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>fluids/fluid_system_host.cu(288): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>fluids/fluid_system_host.cu(289): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Performing Custom Build Tools
+     1>fluids/fluid_system_kern.cu(279): warning : variable "pos" was declared but never referenced
+         
+     1>fluids/fluid_system_kern.cu(596): warning : variable "status" was set but never used
+         
+     1>fluids/fluid_system_kern.cu(279): warning : variable "pos" was declared but never referenced
+         
+     1>fluids/fluid_system_kern.cu(596): warning : variable "status" was set but never used
+         
+         fluid_system_kern.cu
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Ifluids /Icommon /Zi /nologo /W3 /WX- /O2 /Ob2 /Oi /Ot /Oy- /GL /D WIN32 /D NDEBUG /D _WINDOWS /D BUILD_CUDA /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"E:\Documents\GitHub\fluids3\\output\Release\\" /Fd"E:\Documents\GitHub\fluids3\\output\Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /D_ITERATOR_DEBUG_LEVEL=0 common\app_util.cpp
+         app_util.cpp
+     1>common\app_util.cpp(209): error C2039: 'not1' : is not a member of 'std'
+     1>common\app_util.cpp(209): error C2039: 'ptr_fun' : is not a member of 'std'
+     1>common\app_util.cpp(209): error C2065: 'ptr_fun' : undeclared identifier
+     1>common\app_util.cpp(209): error C2062: type 'int' unexpected
+     1>common\app_util.cpp(209): error C3861: 'not1': identifier not found
+     1>common\app_util.cpp(215): error C2039: 'not1' : is not a member of 'std'
+     1>common\app_util.cpp(215): error C2039: 'ptr_fun' : is not a member of 'std'
+     1>common\app_util.cpp(215): error C2065: 'ptr_fun' : undeclared identifier
+     1>common\app_util.cpp(215): error C2062: type 'int' unexpected
+     1>common\app_util.cpp(215): error C3861: 'not1': identifier not found
+     1>common\app_util.cpp(231): warning C4018: '<' : signed/unsigned mismatch
+     1>common\app_util.cpp(307): warning C4018: '>=' : signed/unsigned mismatch
+     1>common\app_util.cpp(309): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>common\app_util.cpp(311): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>common\app_util.cpp(326): warning C4018: '>=' : signed/unsigned mismatch
+     1>common\app_util.cpp(341): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>common\app_util.cpp(343): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>common\app_util.cpp(791): warning C4018: '<' : signed/unsigned mismatch
+     1>common\app_util.cpp(1001): warning C4018: '>=' : signed/unsigned mismatch
+     1>common\app_util.cpp(1009): error C2556: 'float log2(double)' : overloaded function differs only by return type from 'double log2(double)'
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h(504) : see declaration of 'log2'
+     1>common\app_util.cpp(1009): error C2371: 'log2' : redefinition; different basic types
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\math.h(504) : see declaration of 'log2'
+     1>common\app_util.cpp(1009): error C2491: 'log2' : definition of dllimport function not allowed
+     1>common\app_util.cpp(1021): warning C4018: '<' : signed/unsigned mismatch
+     1>common\app_util.cpp(1025): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>common\app_util.cpp(1081): warning C4018: '<' : signed/unsigned mismatch
+     1>common\app_util.cpp(1097): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>common\app_util.cpp(1140): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>common\app_util.cpp(1179): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\string.h(112) : see declaration of 'strcpy'
+     1>common\app_util.cpp(1217): warning C4244: '=' : conversion from 'float' to 'unsigned char', possible loss of data
+     1>common\app_util.cpp(1402): warning C4018: '<' : signed/unsigned mismatch
+     1>common\app_util.cpp(1425): warning C4018: '<' : signed/unsigned mismatch
+     1>Done Building Project "E:\Documents\GitHub\fluids3\fluids_v3.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:09.21

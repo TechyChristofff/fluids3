@@ -1,0 +1,148 @@
+﻿Build started 03/12/2015 19:10:03.
+     1>Project "E:\Documents\GitHub\fluids3\fluids_v3.vcxproj" on node 2 (Build target(s)).
+     1>CustomBuild:
+         Performing Custom Build Tools
+     1>fluids/fluid_system_host.cu(83): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(84): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(92): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(93): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(83): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(84): warning : variable "argv" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(92): warning : variable "argc" was declared but never referenced
+         
+     1>fluids/fluid_system_host.cu(93): warning : variable "argv" was declared but never referenced
+         
+         fluid_system_host.cu
+     1>fluids/fluid_system_host.cu(287): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>fluids/fluid_system_host.cu(288): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>fluids/fluid_system_host.cu(289): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+         Performing Custom Build Tools
+     1>fluids/fluid_system_kern.cu(279): warning : variable "pos" was declared but never referenced
+         
+     1>fluids/fluid_system_kern.cu(596): warning : variable "status" was set but never used
+         
+     1>fluids/fluid_system_kern.cu(279): warning : variable "pos" was declared but never referenced
+         
+     1>fluids/fluid_system_kern.cu(596): warning : variable "status" was set but never used
+         
+         fluid_system_kern.cu
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Documents\GitHub\fluids3\fluids_v3.exe" /INCREMENTAL /NOLOGO tinyXML_2010.lib opengl32.lib cudart.lib cutil32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shell32.lib "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32\cudart.lib" /NODEFAULTLIB:libcpmtd0.lib /NODEFAULTLIB:libcpmtd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Documents\GitHub\fluids3\fluids_v3.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Documents\GitHub\fluids3\fluids_v3.lib" /MACHINE:X86 Debug\fluid_system_host.obj
+         Debug\fluid_system_kern.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.embed.manifest.res
+         E:\Documents\GitHub\fluids3\\output\Debug\app_perf.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\app_util.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\glew.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\xml_settings.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\fluid_system.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\main.obj
+         tinyXML_2010.lib(tinyxml.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+            Creating library E:\Documents\GitHub\fluids3\fluids_v3.lib and object E:\Documents\GitHub\fluids3\fluids_v3.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGenVertexArrays imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBufferData imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBindBuffer imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGenBuffers imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBindVertexArray imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUniform1i imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewPrimitiveRestartIndex imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewVertexAttribPointer imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUniformMatrix4fv imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewActiveTexture imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewEnableVertexAttribArray imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUseProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGetUniformLocation imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewLinkProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewAttachShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCreateProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGetShaderInfoLog imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCompileShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewShaderSource imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCreateShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewDeleteBuffers imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewDrawElementsInstanced imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewPatchParameteri imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewBufferDataARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewBindBufferARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewGenBuffersARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewPointParameterfARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewPointParameterfvARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___glewDebugMessageControlARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___glewDebugMessageCallbackARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewCreateContextAttribsARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewChoosePixelFormatARB imported
+     1>main.obj : warning LNK4049: locally defined symbol _glewInit@0 imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewSwapIntervalEXT imported
+     1>tinyXML_2010.lib(tinyxml.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>tinyXML_2010.lib(tinyxmlparser.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>tinyXML_2010.lib(tinyxmlerror.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.embed.manifest" /manifest E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.intermediate.manifest
+       LinkEmbedManifest:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Documents\GitHub\fluids3\fluids_v3.exe" /INCREMENTAL /NOLOGO tinyXML_2010.lib opengl32.lib cudart.lib cutil32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shell32.lib "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32\cudart.lib" /NODEFAULTLIB:libcpmtd0.lib /NODEFAULTLIB:libcpmtd.lib /NODEFAULTLIB:libcmtd.lib /NODEFAULTLIB:libcmt.lib /MANIFEST /ManifestFile:"E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\Documents\GitHub\fluids3\fluids_v3.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Documents\GitHub\fluids3\fluids_v3.lib" /MACHINE:X86 Debug\fluid_system_host.obj
+         Debug\fluid_system_kern.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\fluids_v3.exe.embed.manifest.res
+         E:\Documents\GitHub\fluids3\\output\Debug\app_perf.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\app_util.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\glew.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\xml_settings.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\fluid_system.obj
+         E:\Documents\GitHub\fluids3\\output\Debug\main.obj
+         tinyXML_2010.lib(tinyxml.obj) : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     1>LINK : warning LNK4075: ignoring '/INCREMENTAL' due to '/LTCG' specification
+            Creating library E:\Documents\GitHub\fluids3\fluids_v3.lib and object E:\Documents\GitHub\fluids3\fluids_v3.exp
+     1>LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+         Generating code
+         Finished generating code
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGenVertexArrays imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBufferData imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBindBuffer imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGenBuffers imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewBindVertexArray imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUniform1i imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewPrimitiveRestartIndex imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewVertexAttribPointer imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUniformMatrix4fv imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewActiveTexture imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewEnableVertexAttribArray imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewUseProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGetUniformLocation imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewLinkProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewAttachShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCreateProgram imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewGetShaderInfoLog imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCompileShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewShaderSource imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewCreateShader imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewDeleteBuffers imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewDrawElementsInstanced imported
+     1>app_util.obj : warning LNK4049: locally defined symbol ___glewPatchParameteri imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewBufferDataARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewBindBufferARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewGenBuffersARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewPointParameterfARB imported
+     1>fluid_system.obj : warning LNK4049: locally defined symbol ___glewPointParameterfvARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___glewDebugMessageControlARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___glewDebugMessageCallbackARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewCreateContextAttribsARB imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewChoosePixelFormatARB imported
+     1>main.obj : warning LNK4049: locally defined symbol _glewInit@0 imported
+     1>main.obj : warning LNK4049: locally defined symbol ___wglewSwapIntervalEXT imported
+     1>tinyXML_2010.lib(tinyxml.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>tinyXML_2010.lib(tinyxmlparser.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+     1>tinyXML_2010.lib(tinyxmlerror.obj) : warning LNK4204: 'E:\Documents\GitHub\fluids3\vc100.pdb' is missing debugging information for referencing module; linking object as if no debug info
+         fluids_v3.vcxproj -> E:\Documents\GitHub\fluids3\fluids_v3.exe
+     1>Done Building Project "E:\Documents\GitHub\fluids3\fluids_v3.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:10.14

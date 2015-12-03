@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -28,11 +28,13 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -41,6 +43,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -62,7 +65,7 @@
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)</OutDir>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DebugGPU\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\output\$(Configuration)</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)\output\$(Configuration)\</IntDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">DebugGPU\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
@@ -72,9 +75,9 @@
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">ReleaseGPU\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
-    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libs;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\include;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libs;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include;$(IncludePath)</IncludePath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Codes\Libraries\trunk\combined\include;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 4.2\C\common\inc;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\include;C:\Program Files %28x86%29\NVIDIA Corporation\Cg\include;$(IncludePath)</IncludePath>
-    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libs;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\Win32;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">libs;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64;$(LibraryPath)</LibraryPath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">E:\Codes\Libraries\trunk\combined\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\x64;C:\Program Files %28x86%29\NVIDIA Corporation\Cg\lib.x64;$(LibraryPath)</LibraryPath>
     <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Codes\Libraries\trunk\combined\include;C:\ProgramData\NVIDIA Corporation\NVIDIA GPU Computing SDK 4.2\C\common\inc;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\include;C:\Program Files %28x86%29\NVIDIA Corporation\Cg\include;$(IncludePath)</IncludePath>
     <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">E:\Codes\Libraries\trunk\combined\lib;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v4.2\lib\x64;C:\Program Files %28x86%29\NVIDIA Corporation\Cg\lib.x64;$(LibraryPath)</LibraryPath>
@@ -101,7 +104,7 @@
       <AdditionalOptions>-D "_HAS_ITERATOR_DEBUGGING=0" %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>tinyXML_2010.lib;opengl32.lib;cudart.lib;cutil32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>tinyXML_2010.lib;opengl32.lib;cudart.lib;cutil32.lib;%(AdditionalDependencies);shell32.lib; "C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\Win32\cudart.lib"</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libcpmtd0.lib;libcpmtd.lib;libcmtd.lib; libcmt.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
@@ -186,9 +189,9 @@
     <None Include="fluids\radixsort.cuh" />
     <None Include="fluids\radixsort_kernel.cu" />
     <CustomBuild Include="fluids\fluid_system_host.cu">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(CUDA_BIN_PATH)\nvcc.exe" -G -D_ITERATOR_DEBUG_LEVEL=0 -lcuda -lcublas -lcudart -m 32 -arch=sm_13 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./  -I../../common/inc -o $(Configuration)\fluid_system_host.obj fluids\fluid_system_host.cu
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(CUDA_BIN_PATH)\nvcc.exe" -G -D_ITERATOR_DEBUG_LEVEL=0 -lcuda -lcublas -lcudart -m 32 -arch=sm_20 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./  -I../../common/inc -o $(Configuration)\fluid_system_host.obj fluids\fluid_system_host.cu
  </Command>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(CUDA_BIN_PATH)\nvcc.exe"  -g -G -arch=sm_13 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./ -o $(Configuration)\fluid_system_host.obj fluids\fluid_system_host.cu
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(CUDA_BIN_PATH)\nvcc.exe"  -g -G -arch=sm_20 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./ -o $(Configuration)\fluid_system_host.obj fluids\fluid_system_host.cu
 </Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">fluid_system_host.cuh; fluid_system_kern.cu; radixsort.cu;%(AdditionalInputs)</AdditionalInputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">fluid_system_host.cuh;radixsort.cu;%(AdditionalInputs)</AdditionalInputs>
@@ -205,7 +208,7 @@
     </CustomBuild>
     <CustomBuild Include="fluids\fluid_system_kern.cu">
       <FileType>Document</FileType>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(CUDA_BIN_PATH)\nvcc.exe"  -G0 -arch=sm_13 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./ -o $(Configuration)\fluid_system_kern.obj fluids\fluid_system_kern.cu</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(CUDA_BIN_PATH)\nvcc.exe"  -G0 -arch=sm_20 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./ -o $(Configuration)\fluid_system_kern.obj fluids\fluid_system_kern.cu</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Configuration)\fluid_system_kern.obj;%(Outputs)</Outputs>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">"$(CUDA_BIN_PATH)\nvcc.exe" -G -D_ITERATOR_DEBUG_LEVEL=0  -lcuda -lcublas -lcudart -m 32 -arch=sm_20 -ccbin "$(VCInstallDir)\bin" -c -D_DEBUG -DWIN32 -D_CONSOLE -D_MBCS -Xcompiler /EHsc,/W3,/nologo,/Od,/Zi,/RTC1,/MTd -I "$(CUDA_INC_PATH)"%3b -I./  -I../../common/inc -o $(Configuration)\fluid_system_kern.obj fluids\fluid_system_kern.cu</Command>
